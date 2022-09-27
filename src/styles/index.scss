@@ -13,12 +13,6 @@ body {
   height: 100vh;
 }
 
-a {
-  &:active {
-    text-decoration: none;
-  }
-}
-
 .flex {
   display: flex;
 }
@@ -40,4 +34,32 @@ a {
 }
 .p-1rem {
   padding: 1rem;
+}
+.p-2rem {
+  padding: 2rem;
+}
+.height-50 {
+  height: 50%;
+}
+
+// setting Default styles for elements
+
+a {
+  &:active {
+    text-decoration: none;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
 }

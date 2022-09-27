@@ -13,6 +13,7 @@ import {
 import GridBoard from "../components/snake/GridBoard";
 import SnakeBody from "../components/snake/SnakeBody";
 import Food from "../components/snake/Food";
+import Confirm from "../components/dialogs/Confirm";
 
 const Snake = () => {
   const dispatch = useDispatch();
@@ -81,11 +82,22 @@ const Snake = () => {
     }, speed);
   };
 
+  const gameOverHander = () => {};
+
   return (
-    <GridBoard>
-      <SnakeBody />
-      <Food />
-    </GridBoard>
+    <>
+      <Confirm
+        title="Hello"
+        buttons={[
+          { type: "confirm", text: "Play Again", onClick: gameOverHander },
+        ]}
+      />
+
+      <GridBoard>
+        <SnakeBody />
+        <Food />
+      </GridBoard>
+    </>
   );
 };
 

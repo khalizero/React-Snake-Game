@@ -1,3 +1,4 @@
+import React from "react";
 import { GiSnakeTongue } from "react-icons/gi";
 import { IoSettingsSharp } from "react-icons/io5";
 

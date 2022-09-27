@@ -23,6 +23,7 @@ const initialState = {
       y: 25,
     },
   ],
+  gameOver: false,
 };
 
 const snakeSlice = createSlice({
@@ -68,7 +69,7 @@ const snakeSlice = createSlice({
       }
 
       state.size.forEach((_, index) => {
-        if (index > 1) {
+        if (index > 2) {
           if (
             JSON.stringify(state.size[0]) === JSON.stringify(state.size[index])
           ) {

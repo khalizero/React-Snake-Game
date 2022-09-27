@@ -8,7 +8,7 @@ const MainLayout = () => {
   return (
     <div>
       <Nav navItems={navItems} />
-      <div className="p-1rem">
+      <div className="p-1rem mainWrapper">
         <Outlet />
       </div>
     </div>

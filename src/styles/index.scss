@@ -63,3 +63,34 @@ button {
     color: white;
   }
 }
+
+// Mainlayout styling
+.mainWrapper {
+  height: 85vh;
+}
+
+@media (min-width: 1320px) {
+  .navBar {
+    height: 98px;
+  }
+  .gridBoard {
+    width: 35%;
+  }
+}
+@media (max-width: 1400px) {
+  .navBar {
+    height: 98px;
+  }
+  .gridBoard {
+    width: 43%;
+  }
+}
+
+@media (max-width: 1320px) {
+  .navBar {
+    height: 98px;
+  }
+  .gridBoard {
+    width: 42%;
+  }
+}

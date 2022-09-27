@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { randomPos } from "../../hooks/RandomFood";
 
 const initialState = {
-  speed: 50,
+  speed: 100,
   foodPos: randomPos(),
   size: [randomPos()],
   gameOver: { isOpen: false, text: null },

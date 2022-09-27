@@ -1,0 +1,34 @@
+@import "./variables";
+.navBar {
+  display: flex;
+  align-items: center;
+  background-color: $color1;
+  .navHead {
+    color: #ffffff;
+    font-size: 45px;
+    padding: 0 0 0 20px;
+  }
+  .navData {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0 20px;
+    .navText {
+      font-size: 18px;
+      color: white;
+    }
+    .navIcon {
+      color: aliceblue;
+      font-size: 40px;
+      transition: background-color 0.5s;
+    }
+  }
+  .activeNav {
+    .navIcon {
+      border-radius: 8px;
+      background-color: #005199;
+      padding: 8px 8px 0;
+      margin-bottom: 9px;
+    }
+  }
+}

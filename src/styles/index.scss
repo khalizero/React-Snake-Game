@@ -1,0 +1,43 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontFamily;
+}
+
+body {
+  background: url("../assets/images/pageBg.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+a {
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-base {
+  align-items: baseline;
+}
+
+.p-05rem {
+  padding: 0.5rem;
+}
+.p-1rem {
+  padding: 1rem;
+}

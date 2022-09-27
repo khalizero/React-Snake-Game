@@ -1,0 +1,10 @@
+.snake {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: radial-gradient(white, gray);
+  border-radius: 6px;
+  &:first-child {
+    background-color: aquamarine !important;
+  }
+}

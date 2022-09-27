@@ -8,10 +8,10 @@ const navItems = [
     icon: <GiSnakeTongue />,
     path: "/snake",
   },
-  {
-    title: "Settings",
-    icon: <IoSettingsSharp />,
-    path: "/settings",
-  },
+  // {
+  //   title: "Settings",
+  //   icon: <IoSettingsSharp />,
+  //   path: "/settings",
+  // },
 ];
 export default navItems;

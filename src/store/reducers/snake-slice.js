@@ -2,27 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 import { randomPos } from "../../hooks/RandomFood";
 
 const initialState = {
-  direction: null,
   speed: 100,
   foodPos: randomPos(),
-  size: [
-    {
-      x: 25,
-      y: 25,
-    },
-    {
-      x: 24,
-      y: 25,
-    },
-    {
-      x: 23,
-      y: 25,
-    },
-    {
-      x: 22,
-      y: 25,
-    },
-  ],
+  size: [randomPos()],
+  gameOver: { isOpen: false, text: null },
 };
 
 const snakeSlice = createSlice({
@@ -64,18 +47,33 @@ const snakeSlice = createSlice({
         state.size[0].x > 30 ||
         state.size[0].y > 30
       ) {
-        console.log("Snake has collided with the wall");
+        state.gameOver = {
+          isOpen: true,
+          text: "Snake has collided with the wall",
+        };
       }
 
       state.size.forEach((_, index) => {
-        if (index > 1) {
+        if (index > 2) {
           if (
             JSON.stringify(state.size[0]) === JSON.stringify(state.size[index])
           ) {
-            console.log("Snake has eaten itself");
+            state.gameOver = {
+              isOpen: true,
+              text: "Snake has eaten itself.",
+            };
           }
         }
       });
+    },
+    gameOver(state) {
+      state.size.length = 0;
+      state.size.push(randomPos());
+      state.foodPos = randomPos();
+      state.gameOver = {
+        isOpen: false,
+        text: null,
+      };
     },
     setspeed(state, action) {
       state.speed = action.payload;
@@ -116,5 +114,6 @@ export const {
   setspeed,
   setDirection,
   onCollision,
+  gameOver,
 } = snakeSlice.actions;
 export default snakeSlice.reducer;

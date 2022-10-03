@@ -1,10 +1,10 @@
 .gridBoard {
   display: grid;
-  grid-template-columns: repeat(30, 25px);
-  grid-template-rows: repeat(30, 25px);
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
   background: linear-gradient(lightblue, rgb(134, 190, 238), lightblue);
-  width: calc(25 * 30px);
-  height: calc(25 * 30px);
+  width: 80%;
+  aspect-ratio: 1/1;
   margin: auto;
 }
 .snakeFood {

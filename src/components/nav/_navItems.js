@@ -1,3 +1,4 @@
+import React from "react";
 import { GiSnakeTongue } from "react-icons/gi";
 import { IoSettingsSharp } from "react-icons/io5";
 
@@ -7,10 +8,10 @@ const navItems = [
     icon: <GiSnakeTongue />,
     path: "/snake",
   },
-  {
-    title: "Settings",
-    icon: <IoSettingsSharp />,
-    path: "/settings",
-  },
+  // {
+  //   title: "Settings",
+  //   icon: <IoSettingsSharp />,
+  //   path: "/settings",
+  // },
 ];
 export default navItems;
